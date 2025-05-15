@@ -2,27 +2,6 @@ class Bookstore:
 
     def __init__(self):
         self.books = []
-
-    def add_book(self, title, author, price):
-        book = {
-            'title': title,
-            'author': author,
-            'price': price
-        }
-        self.books.append(book)
-
-    def get_books(self):
-        return self.books
-
-    def find_book_by_title(self, title):
-        for book in self.books:
-            if book['title'] == title:
-                return book
-        return None
-
-    def find_books_by_author(self, author):
-        return [book for book in self.books if book['author'] == author]
-
     
     def __str__(self):
         return "\n".join([f"{book['book']} - Quantity: {book['quantity']}" for book in self.books])
